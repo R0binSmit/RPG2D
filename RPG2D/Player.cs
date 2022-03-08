@@ -13,12 +13,17 @@ namespace RPG2D_Windows
             vector2D = new Vector2(0, 0);
         }
 
+        public void Move() 
+        {
+            vector2D = new Vector2(vector2D.X + 1, vector2D.Y);
+        }
+
         public void Draw() 
         {
             if(SpriteBatch != null)
             {
                 SpriteBatch.Begin();
-                SpriteBatch.Draw(Texture2D, Vector2.Zero, Color.Black);
+                SpriteBatch.Draw(Texture2D, vector2D, Color.Black);
                 SpriteBatch.End();
             }
         }

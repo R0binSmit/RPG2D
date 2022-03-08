@@ -24,6 +24,7 @@ namespace RPG2D_Windows
 
             /* Load Player */
             player = new Player();
+            player.SpriteBatch = new SpriteBatch(GraphicsDevice);
             player.Texture2D = Content.Load<Texture2D>("content/player");
         }
 
@@ -36,6 +37,7 @@ namespace RPG2D_Windows
         protected override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+            player.Move();
         }
 
         protected override void Draw(GameTime gameTime)
