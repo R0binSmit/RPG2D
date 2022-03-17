@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using RPG2D_Windows.Entities;
+using RPG2D_Windows.Entities.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,17 @@ namespace RPG2D_Windows.Helper
             Vector2 playerPosition = new Vector2(maxGameWidth / 2, maxGameHeight / 2);
             float playerSpeed = 2;
             return new Player(playerTexture, playerPosition, playerSpeed);
+        }
+
+        public static BaseItem Ring(Game game) 
+        {
+            return new BaseItem(
+                game.Content.Load<Texture2D>(ContentPathHelper.Ring),
+                new Vector2(50, 50),
+                "Ring",
+                "Nice yellow Ring",
+                true
+            );
         }
     }
 }

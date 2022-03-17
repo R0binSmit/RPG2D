@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using RPG2D_Windows.Entities;
+using RPG2D_Windows.Entities.Items;
 using RPG2D_Windows.Helper;
 using RPG2D_Windows.Interface;
 
@@ -44,6 +45,9 @@ namespace RPG2D_Windows
             );
             movableEntities.Add(player);
             drawableEntities.Add(player);
+
+            BaseItem ring = LoadHelper.Ring(this);
+            drawableEntities.Add(ring);
         }
 
         protected override void UnloadContent()
