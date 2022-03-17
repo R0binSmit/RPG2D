@@ -9,8 +9,19 @@ using System.Threading.Tasks;
 
 namespace RPG2D_Windows.Helper
 {
+    /// <summary>
+    /// This class helps out loading all objects for the game.
+    /// </summary>
     internal static class LoadHelper
     {
+        /// <summary>
+        /// Initialize the player object with its core properties. With that it returns the constructed player object
+        /// back to the Game1 LoadContent() method.
+        /// </summary>
+        /// <param name="maxGameWidth">The width of the window</param>
+        /// <param name="maxGameHeight">The height of the window</param>
+        /// <param name="playerTexture">The texture of the Player</param>
+        /// <returns>Player</returns>
         public static Player LoadPlayer(int maxGameWidth, int maxGameHeight, Texture2D playerTexture )
         {
             Vector2 playerPosition = new Vector2(maxGameWidth / 2, maxGameHeight / 2);
