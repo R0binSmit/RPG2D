@@ -37,8 +37,11 @@ namespace RPG2D_Windows
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             /* Load Player */
-            player = LoadHelper.LoadPlayer(graphics.PreferredBackBufferWidth, 
-                graphics.PreferredBackBufferHeight, Content.Load<Texture2D>("content/player"));
+            player = LoadHelper.LoadPlayer(
+                graphics.PreferredBackBufferWidth,
+                graphics.PreferredBackBufferHeight,
+                Content.Load<Texture2D>("content/player")
+            );
             movableEntities.Add(player);
             drawableEntities.Add(player);
         }
@@ -51,7 +54,7 @@ namespace RPG2D_Windows
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed 
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed
                 || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
@@ -65,22 +68,9 @@ namespace RPG2D_Windows
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            Texture2D playerSettedTexture = player.GetTexture();
-
             spriteBatch.Begin();
-            foreach (Interface.IDrawable movable in movableEntities.OfType<Interface.IDrawable>())
-                //               spriteBatch.Draw(movable.GetTexture(), movable.GetVector(), Color.White);
-                spriteBatch.Draw(
-                   playerSettedTexture,
-                   player.GetVector(),
-                   null,
-                   Color.White,
-                   0f,
-                   new Vector2(playerSettedTexture.Width / 2, playerSettedTexture.Height / 2),
-                   Vector2.One,
-                   SpriteEffects.None,
-                   0f
-               );
+            foreach (Interface.IDrawable drawable in drawableEntities.OfType<Interface.IDrawable>())
+                drawable.Draw(spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);

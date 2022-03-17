@@ -10,8 +10,7 @@ namespace RPG2D_Windows.Interface
 {
     internal interface IDrawable
     {
-        void SetTexture(Texture2D texture2D);
-        Texture2D GetTexture();
+        void Draw(SpriteBatch spriteBatch);
         Vector2 GetVector();
     }
 }
