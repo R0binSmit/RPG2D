@@ -12,11 +12,11 @@ namespace RPG2D_Windows.Entities
         private Texture2D texture;
 
 
-        public Player(Texture2D texture2D)
+        public Player(Texture2D texture2D, Vector2 position2D, float speed2D)
         {
-            position = new Vector2(0, 0);
+            position = position2D;
             texture = texture2D;
-            speed = 2;
+            speed = speed2D;
         }
 
         public void Move()
