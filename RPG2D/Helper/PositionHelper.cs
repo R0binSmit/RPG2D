@@ -4,7 +4,14 @@ namespace RPG2D_Windows.Helper
 {
     internal static class PositionHelper
     {
-        public static bool InRange(Point minPosition, Point maxPosition, Point entitiePosition) 
+        /// <summary>
+        /// Check if entitiePosition is in a defined square (minPosition, maxPosition).
+        /// </summary>
+        /// <param name="minPosition">Top left corner form the square</param>
+        /// <param name="maxPosition">Bottom right corner frome the square</param>
+        /// <param name="entitiePosition">Position frome the entitie</param>
+        /// <returns>True if the entitie is in the square.</returns>
+        public static bool InSquare(Point minPosition, Point maxPosition, Point entitiePosition) 
         {
             return entitiePosition.X <= maxPosition.X
                 && entitiePosition.Y <= maxPosition.Y

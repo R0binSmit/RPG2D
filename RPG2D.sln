@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPG2D_Windows", "RPG2D\RPG2D_Windows.csproj", "{B4B52F19-8D6A-4AF9-B04C-10BFB8B88245}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPG2D_Windows", "RPG2D\RPG2D_Windows.csproj", "{B4B52F19-8D6A-4AF9-B04C-10BFB8B88245}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
