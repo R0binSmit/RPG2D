@@ -5,20 +5,18 @@ using RPG2D_Windows.Interface;
 
 namespace RPG2D_Windows.Entities
 {
-    internal class Player : IMovable, Interface.IDrawable
+    internal class Player : BaseEntitie,  IMovable
     {
         private float speed;
-        private Vector2 position;
-        private Texture2D texture;
 
-
-        public Player(Texture2D texture2D, Vector2 position2D, float speed2D)
+        public Player(Texture2D texture, Vector2 position, float speed2D) : base(texture, position)
         {
-            position = position2D;
-            texture = texture2D;
             speed = speed2D;
         }
 
+        /// <summary>
+        /// Basic player movement.
+        /// </summary>
         public void Move()
         {
             Point newPosition = new Point((int)position.X, (int)position.Y);
@@ -35,27 +33,11 @@ namespace RPG2D_Windows.Entities
             if (InputHelper.IsKeyDownPressed())
                 newPosition.Y = (int)(position.Y + 1 * speed);
 
-            if (PositionHelper.InRange(Game1.BasePoint, new Point(1920, 1080), newPosition)) 
+            if (PositionHelper.InSquare(Game1.BasePoint, new Point(1920, 1080), newPosition)) 
             {
                 position.Y = newPosition.Y;
                 position.X = newPosition.X;
             }
-        }
-
-
-        public void SetTexture(Texture2D texture2D)
-        {
-            texture = texture2D;
-        }
-
-        public Texture2D GetTexture()
-        {
-            return texture;
-        }
-
-        public Vector2 GetVector() 
-        {
-            return position;
         }
     }
 }
