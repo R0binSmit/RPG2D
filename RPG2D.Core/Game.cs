@@ -1,23 +1,23 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using RPG2D_Windows.Entities;
-using RPG2D_Windows.Entities.Items;
-using RPG2D_Windows.Helper;
-using RPG2D_Windows.Interface;
+using RPG2D.Entities;
+using RPG2D.Entities.Items;
+using RPG2D.Helper;
+using RPG2D.Interface;
 
-namespace RPG2D_Windows
+namespace RPG2D
 {
-    internal class Game1 : Game
+    public class Game : Microsoft.Xna.Framework.Game
     {
         public static readonly Point BasePoint = new Point(0, 0);
-        private readonly GraphicsDeviceManager graphics;
+        internal readonly GraphicsDeviceManager graphics;
         private readonly List<IMovable> movableEntities = new List<IMovable>();
         private readonly List<Interface.IDrawable> drawableEntities = new List<Interface.IDrawable>();
         SpriteBatch spriteBatch;
         private Player player;
 
-        public Game1() : base()
+        public Game() : base()
         {
             graphics = new GraphicsDeviceManager(this);
         }
@@ -38,11 +38,7 @@ namespace RPG2D_Windows
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             /* Load Player */
-            player = LoadHelper.LoadPlayer(
-                graphics.PreferredBackBufferWidth,
-                graphics.PreferredBackBufferHeight,
-                Content.Load<Texture2D>("content/player")
-            );
+            player = LoadHelper.Player(this);
             movableEntities.Add(player);
             drawableEntities.Add(player);
 
