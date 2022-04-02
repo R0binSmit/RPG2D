@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace RPG2D_Windows.Helper
+namespace RPG2D.Helper
 {
     internal static class PositionHelper
     {

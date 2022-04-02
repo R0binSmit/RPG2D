@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace RPG2D_Windows.Entities.Items
+namespace RPG2D.Entities.Items
 {
     internal class BaseItem : BaseEntitie
     {

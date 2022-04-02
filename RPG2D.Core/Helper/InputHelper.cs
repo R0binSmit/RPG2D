@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace RPG2D_Windows.Helper
+namespace RPG2D.Helper
 {
     internal static class InputHelper
     {

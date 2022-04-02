@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPG2D_Windows", "RPG2D\RPG2D_Windows.csproj", "{B4B52F19-8D6A-4AF9-B04C-10BFB8B88245}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPG2D.Core", "RPG2D.Core\RPG2D.Core.csproj", "{8739EB0B-3370-45E5-B378-0EEBD843AABA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPG2D.DesktopGL", "RPG2D.DesktopGL\RPG2D.DesktopGL.csproj", "{931A7B87-61C6-47E4-BE2E-F5E9A430235F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B4B52F19-8D6A-4AF9-B04C-10BFB8B88245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4B52F19-8D6A-4AF9-B04C-10BFB8B88245}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4B52F19-8D6A-4AF9-B04C-10BFB8B88245}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4B52F19-8D6A-4AF9-B04C-10BFB8B88245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8739EB0B-3370-45E5-B378-0EEBD843AABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8739EB0B-3370-45E5-B378-0EEBD843AABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8739EB0B-3370-45E5-B378-0EEBD843AABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8739EB0B-3370-45E5-B378-0EEBD843AABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{931A7B87-61C6-47E4-BE2E-F5E9A430235F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931A7B87-61C6-47E4-BE2E-F5E9A430235F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931A7B87-61C6-47E4-BE2E-F5E9A430235F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931A7B87-61C6-47E4-BE2E-F5E9A430235F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

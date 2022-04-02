@@ -1,8 +1,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using RPG2D_Windows.Interface;
+using RPG2D.Interface;
 
-namespace RPG2D_Windows.Entities
+namespace RPG2D.Entities
 {
     internal class BaseEntitie : Interface.IDrawable
     {
