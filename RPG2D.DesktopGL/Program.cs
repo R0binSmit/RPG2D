@@ -1,10 +1,11 @@
-﻿namespace RPG2D_Windows
+﻿namespace RPG2D.DesktopGL
 {
     public static class Program
     {
-        public static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
-            using (Game1 game = new Game1()) 
+            using (var game = new Game())
             {
                 game.Run();
             }
