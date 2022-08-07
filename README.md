@@ -1,6 +1,5 @@
 # RPG2D
-This is community project from Nyxero and Platin (https://www.twitch.tv/itsplatin).
-Together withe the community on twitch we are coding a fun RPG2D project.
+This is community project from Nyxero.
 
 # Development rules
 ## Commits and Branches
